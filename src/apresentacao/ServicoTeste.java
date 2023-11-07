@@ -24,7 +24,7 @@ public class ServicoTeste {
 		int opcao = 0;
 		
 		while (opcao != 5) {
-			System.out.println("Escolha uma opção: \n1- Listar serviços \n2- Salvar novo serviço \n3- Atualizar serviço \n4- Deletar serviço");
+			System.out.println("Escolha uma opção: \n1- Listar serviços \n2- Salvar novo serviço \n3- Atualizar serviço \n4- Deletar serviço \n5- Sair");
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
@@ -157,6 +157,10 @@ public class ServicoTeste {
 					
 					System.out.println("Serviço deletado");
 				}
+				break;
+			case 5:
+				System.out.println("Logout realizado com sucesso");
+				opcao = 5;
 				break;
 			default:
 				System.out.println("Opção inválida!");
