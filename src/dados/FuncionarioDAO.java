@@ -91,7 +91,7 @@ public class FuncionarioDAO {
 	    
 	    if (resultado != null) {
 	        em.getTransaction().begin();
-	        resultado = em.merge(resultado); // Mesclar a entidade
+	        resultado = em.merge(resultado);
 	        em.remove(resultado);
 	        em.getTransaction().commit();
 	        System.out.println("Funcionário removido com sucesso");

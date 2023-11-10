@@ -34,7 +34,7 @@ public class CategoriaDAO {
 	    EntityManagerFactory emf = Persistence.createEntityManagerFactory("servicosPU");
 	    EntityManager em = emf.createEntityManager();
 	    
-	    em.getTransaction().begin(); // Iniciar a transação
+	    em.getTransaction().begin(); 
 
 	    Query query = em.createQuery("SELECT c FROM Categoria c", Categoria.class);
 	    List<Categoria> categorias = query.getResultList();
@@ -91,7 +91,7 @@ public class CategoriaDAO {
 	    
 	    if (categoriaProcurada != null) {
 	        em.getTransaction().begin();
-	        categoriaProcurada = em.merge(categoriaProcurada); // Mesclar a entidade
+	        categoriaProcurada = em.merge(categoriaProcurada);
 	        em.remove(categoriaProcurada);
 	        em.getTransaction().commit();
 	        System.out.println("Categoria removido com sucesso");
